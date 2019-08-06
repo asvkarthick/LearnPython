@@ -8,3 +8,6 @@ print(x)
 
 x = x + 2
 print(x)
+
+y = np.array([[1,2,3],[4,5,6]])
+print(y)
