@@ -9,7 +9,9 @@ Python for Data Science and AI, Coursera course by IBM
 
 # Linux Instructions
 sudo pip install pandas
+
 sudo pip install numpy
+
 sudo pip install matplotlib
 
 # MacOS Instructions
