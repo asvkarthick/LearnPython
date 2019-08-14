@@ -20,6 +20,18 @@ class Vector(object):
     def __eq__(self, v):
         return self.coordinates == v.coordinates
 
+    def add(self, v):
+        new_coordinates = [x+y for x,y in zip(self.coordinates, v.coordinates)]
+        return Vector(new_coordinates)
+
+    def sub(self, v):
+        new_coordinates = [x-y for x,y in zip(self.coordinates, v.coordinates)]
+        return Vector(new_coordinates)
+
+    def scale(self, c):
+        new_coordinates = [c*x for x in self.coordinates]
+        return Vector(new_coordinates)
+
 v1 = Vector([1, 2])
 print v1
 
@@ -27,3 +39,6 @@ v1 = Vector([8.218, -9.341])
 v2 = Vector([-1.129, 2.111])
 print v1
 print v2
+print v1.add(v2)
+print v1.sub(v2)
+print v1.scale(10)
