@@ -50,6 +50,17 @@ class Vector(object):
     def normalize(self):
         return self.div(self.magnitude())
 
+    def dot(self, v):
+        new_coordinates = [x * y for x,y in zip(self.coordinates, v.coordinates)]
+        result = sum(new_coordinates)
+        return result
+
+    def angle(self, v):
+        dot_product = self.dot(v)
+        mag1 = self.magnitude()
+        mag2 = v.magnitude()
+        return math.acos(dot_product / (mag1 * mag2)) * 180 / math.pi
+
 v1 = Vector([1, 2])
 print v1
 
@@ -75,3 +86,19 @@ v4 = v4.div(v4.magnitude())
 print v3
 print v4
 print v1.normalize()
+
+v1 = Vector([7.887, 4.138])
+v2 = Vector([-8.802, 6.776])
+print('dot = ', v1.dot(v2))
+
+v1 = Vector([-5.955, -4.904, -1.874])
+v2 = Vector([-4.496, -8.755, 7.103])
+print('dot = ', v1.dot(v2))
+
+v1 = Vector([3.183, -7.627])
+v2 = Vector([-2.668, 5.319])
+print('Angle = ', v1.angle(v2))
+
+v1 = Vector([7.35, 0.221, 5.188])
+v2 = Vector([2.751, 8.259, 3.985])
+print('Angle = ', v1.angle(v2))
