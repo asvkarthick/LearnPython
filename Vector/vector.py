@@ -47,6 +47,9 @@ class Vector(object):
             mag += x * x
         return math.sqrt(mag)
 
+    def normalize(self):
+        return self.div(self.magnitude())
+
 v1 = Vector([1, 2])
 print v1
 
@@ -71,3 +74,4 @@ v3 = v3.div(v3.magnitude())
 v4 = v4.div(v4.magnitude())
 print v3
 print v4
+print v1.normalize()
