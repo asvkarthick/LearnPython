@@ -102,3 +102,15 @@ print('Angle = ', v1.angle(v2))
 v1 = Vector([7.35, 0.221, 5.188])
 v2 = Vector([2.751, 8.259, 3.985])
 print('Angle = ', v1.angle(v2))
+
+v1 = Vector([-7.579, -7.88])
+v2 = Vector([22.737, 23.64])
+print('Angle = ', v1.angle(v2))
+
+v1 = Vector([-2.029, 9.92, 4.172])
+v2 = Vector([-9.231, -6.639, -7.245])
+print('Angle = ', v1.angle(v2))
+
+v1 = Vector([-2.328, -7.284, -1.214])
+v2 = Vector([-1.821, 1.072, -2.94])
+print('Angle = ', v1.angle(v2))
