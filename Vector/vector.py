@@ -1,3 +1,8 @@
+#!/usr/bin/python
+# Karthick Kumaran <asvkarthick@gmail.com>
+
+import math
+
 class Vector(object):
     def __init__(self, coordinates):
         try:
@@ -32,6 +37,16 @@ class Vector(object):
         new_coordinates = [c*x for x in self.coordinates]
         return Vector(new_coordinates)
 
+    def div(self, c):
+        new_coordinates = [x / c for x in self.coordinates]
+        return Vector(new_coordinates)
+
+    def magnitude(self):
+        mag = 0.0
+        for x in self.coordinates:
+            mag += x * x
+        return math.sqrt(mag)
+
 v1 = Vector([1, 2])
 print v1
 
@@ -42,3 +57,17 @@ print v2
 print v1.add(v2)
 print v1.sub(v2)
 print v1.scale(10)
+
+v1 = Vector([-0.221, 7.437])
+v2 = Vector([8.813, -1.331, -6.247])
+v3 = Vector([5.581, -2.136])
+v4 = Vector([1.996, 3.108, -4.554])
+print v1.magnitude()
+print v2.magnitude()
+print v3.magnitude()
+print v4.magnitude()
+
+v3 = v3.div(v3.magnitude())
+v4 = v4.div(v4.magnitude())
+print v3
+print v4
