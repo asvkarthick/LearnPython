@@ -18,7 +18,12 @@ l[1] = 200
 print(l)
 
 print('Remove the last element from the list')
-l.pop()
+x = l.pop()
+print('Popped element = {}'.format(x))
+print(l)
+
+print('Changing 2nd element of list back to 1')
+l[1] = 1
 print(l)
 
 print('Removing element at index 1')
