@@ -14,4 +14,5 @@ print(type(l))
 
 print('Print all the elements in the list with loop')
 for i in l:
-    print(i)
+    print(i, end = ' ', flush = True)
+print()
