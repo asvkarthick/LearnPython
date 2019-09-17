@@ -9,3 +9,5 @@ print(l)
 
 l.insert(0, 0)
 print(l)
+
+print(type(l))
