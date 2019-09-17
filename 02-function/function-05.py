@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # Author: Karthick Kumaran <asvkarthick@gmail.com>
+# Function with variable number of arguments
 
 def print_args(*args):
 	if len(args):
