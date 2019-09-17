@@ -24,3 +24,7 @@ print(l)
 print('Remove element at index 2')
 del l[2]
 print(l)
+
+print('Remove elements from index 1 to 4')
+del l[1:4]
+print(l)
