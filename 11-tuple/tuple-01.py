@@ -8,4 +8,5 @@ print(type(t))
 
 print('Print all the elements in the tuple with loop')
 for i in t:
-    print(i)
+    print(i, end = ' ', flush = True)
+print()
