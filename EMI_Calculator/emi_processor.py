@@ -39,3 +39,12 @@ while i < n:
     monthly_principal = monthly_emi - monthly_interest
     principal_balance = principal_balance - monthly_principal
     print(i, '\t', monthly_emi, '\t', monthly_interest, '\t', monthly_principal, '\t', principal_balance)
+
+print()
+print()
+print('Principal = ', p)
+print('Rate of interest = ', r * 100.0 * 12.0)
+print('Number of years = ', n / 12)
+print('EMI = ', emi(p, r, n))
+print('Total payment = ', n * emi(p, r, n))
+print('Total interest paid = ', n * emi(p, r, n) - p)
