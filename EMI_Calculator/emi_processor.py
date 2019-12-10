@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # Author: Karthick Kumaran <asvkarthick@gmail.com>
 
+import matplotlib.pyplot as plt
+
 def emi(p, r, n):
     e = p * r * pow(1 + r, n) / (pow(1 + r, n) - 1)
     return e
@@ -33,12 +35,18 @@ print('-------------------------------------------------------------------------
 i = 0
 monthly_emi = emi(p, r, n)
 principal_balance = p
+plt_p = []
+plt_i = []
+iter = []
 while i < n:
     i = i + 1
     monthly_interest = compute_interest(principal_balance, r)
     monthly_principal = monthly_emi - monthly_interest
     principal_balance = principal_balance - monthly_principal
     print(i, '\t', monthly_emi, '\t', monthly_interest, '\t', monthly_principal, '\t', principal_balance)
+    plt_p.append(monthly_principal)
+    plt_i.append(monthly_interest)
+    iter.append(i)
 
 print()
 print()
@@ -48,3 +56,8 @@ print('Number of years = ', n / 12)
 print('EMI = ', emi(p, r, n))
 print('Total payment = ', n * emi(p, r, n))
 print('Total interest paid = ', n * emi(p, r, n) - p)
+
+fig = plt.figure(figsize=(40, 30))
+plt.scatter(iter, plt_p, c = 'g')
+plt.scatter(iter, plt_i, c = 'r')
+plt.show()
