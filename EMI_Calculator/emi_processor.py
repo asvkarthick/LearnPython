@@ -30,7 +30,7 @@ print()
 print()
 
 print('-----------------------------------------------------------------------------------------------------')
-print('Month\t EMI\t\t\t Interest\t\t Principal\t\t Loan Balance')
+print('Month\t     EMI\t Interest\t\t Principal\t\t Loan Balance')
 print('-----------------------------------------------------------------------------------------------------')
 i = 0
 monthly_emi = emi(p, r, n)
@@ -43,7 +43,7 @@ while i < n:
     monthly_interest = compute_interest(principal_balance, r)
     monthly_principal = monthly_emi - monthly_interest
     principal_balance = principal_balance - monthly_principal
-    print(i, '\t', monthly_emi, '\t', monthly_interest, '\t', monthly_principal, '\t', principal_balance)
+    print('{:d}\t {:10.2f}\t {:10.2f}\t\t {:10.2f}\t\t {:10.2f}'.format(i, monthly_emi, monthly_interest, monthly_principal, principal_balance))
     plt_p.append(monthly_principal)
     plt_i.append(monthly_interest)
     iter.append(i)
