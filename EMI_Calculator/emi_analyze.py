@@ -34,22 +34,13 @@ def print_emi_table(p, r, n):
 
 #### Start of Main ####
 # Principal
-p = int(input("Enter Principal:"))
+p = int(input("Enter Principal : "))
 # Rate of interest
-r = float(input("Enter Rate of Interest(year):"))
+r = float(input("Enter Rate of Interest(year) : "))
 r = r / 100.0 / 12.0 # Monthly interest
 # Number of months
-n = int(input("Enter number of years:"))
+n = int(input("Enter number of years : "))
 n = n * 12
-
-print('Principal = ', p)
-print('Rate of interest = ', r * 100.0 * 12.0)
-print('Number of years = ', n / 12)
-print('EMI = ', emi(p, r, n))
-print('Total payment = ', n * emi(p, r, n))
-print('Total interest paid = ', n * emi(p, r, n) - p)
-print()
-print()
 
 principal_greater_index = print_emi_table(p, r, n)
 
