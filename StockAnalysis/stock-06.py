@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 
 tickers = []
-with open("stocks.txt", 'r') as f:
+with open("tickers.txt", 'r') as f:
     for line in f:
         #tickers.append(f'"{line.strip}"')
         tickers.append(line.strip())
