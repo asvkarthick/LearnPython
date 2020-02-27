@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-data = yf.download("AMZN AAPL", start="2020-01-01", end="2020-02-20", group_by="ticker")
+data = yf.download("AMZN AAPL", start="2020-02-20", end="2020-02-26", group_by="ticker")
 close_amzn = data['AMZN']['Close']
 close_aapl = data['AAPL']['Close']
 
