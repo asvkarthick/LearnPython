@@ -1,7 +1,11 @@
 import yfinance as yf
 import pandas as pd
 
-tickers = ["AMZN", "AAPL", "MSFT", "GOOG", "FB"]
+tickers = []
+with open("stocks.txt", 'r') as f:
+    for line in f:
+        #tickers.append(f'"{line.strip}"')
+        tickers.append(line.strip())
 
 data = yf.download(tickers, start="2020-02-20", end="2020-02-26", group_by="ticker")
 
@@ -9,7 +13,6 @@ close = []
 diff = []
 for c in tickers:
     close.append(data[c]['Close'])
-    # d = data[c]['Close'][0]
     d = 0
     i = 1
     while i < len(data):
