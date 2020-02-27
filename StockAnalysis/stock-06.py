@@ -4,7 +4,6 @@ import pandas as pd
 tickers = []
 with open("tickers.txt", 'r') as f:
     for line in f:
-        #tickers.append(f'"{line.strip}"')
         tickers.append(line.strip())
 
 data = yf.download(tickers, start="2020-02-20", end="2020-02-26", group_by="ticker")
