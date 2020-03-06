@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Author: Karthick Kumaran <asvkarthick@gmail.com>
 # Command to run: python3 internal_stock_analysis.py
 
