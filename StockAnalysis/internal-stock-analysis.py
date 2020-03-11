@@ -10,9 +10,9 @@ today = datetime.datetime.now()
 today_date = today.strftime("%Y-%m-%d")
 print(today_date)
 
-input_file = 'CV2020_Feb28'
+input_file = input("Enter Ticker file without .txt : ")
 start_date = '2020-02-20'
-end_date = '2020-03-05'
+end_date = '2020-03-10'
 
 tickers = []
 with open(input_file + '.txt', 'r') as f:
@@ -41,7 +41,7 @@ for c in tickers:
 df = pd.concat(close, axis = 1, keys = tickers)
 print(df)
 df = df.T
-df.to_csv('close.csv')
+df.to_csv('close_' + input_file + '_' + start_date + '_' + end_date + '.csv')
 
 print("------------------------------------")
 print("After Corona-Virus stocks difference")
