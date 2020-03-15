@@ -11,8 +11,8 @@ today_date = today.strftime("%Y-%m-%d")
 print(today_date)
 
 input_file = input("Enter Ticker file without .txt : ")
-start_date = '2020-02-20'
-end_date = '2020-03-10'
+start_date = input("Enter start date (yyyy-mm-dd) : ")
+end_date = input("Enter end date (yyyy-mm-dd) : ")
 
 tickers = []
 with open(input_file + '.txt', 'r') as f:
