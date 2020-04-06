@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Author: Karthick Kumaran <asvkarthick@gmail.com>
+# Simple GUI Program with just a window
 
 import tkinter as tk
 
